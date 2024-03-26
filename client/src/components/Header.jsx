@@ -1,4 +1,4 @@
-import { FaBed, FaSearch } from 'react-icons/fa';
+import { FaBed, FaSearch,FaFacebook,FaTiktok,FaInstagram } from 'react-icons/fa';
 import {Link,useNavigate} from 'react-router-dom';
 import {useSelector} from 'react-redux'
 import { useEffect, useState } from 'react';
@@ -30,7 +30,7 @@ export default function Header() {
       <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
       <Link to="/">
           <h1 className="font-bold text-xl flex flex-wrap">
-          <img src="/assets/Logo.jpg" alt="Logo" className="h-6 w-6 mr-1" />
+        
             <span className="text-slate-600 ">StudyStay </span>
             <span className='text-slate-800 '>Seeker </span>
           </h1>
@@ -51,6 +51,7 @@ export default function Header() {
         <ul className='flex gap-4'>
         <Link to='/'>
             <li className='hidden sm:inline text-slate-700 hover:underline'>Home</li>
+            
         </Link>
         <Link to='/about'>
             <li className='hidden sm:inline text-slate-700 hover:underline'>About</li>
@@ -66,7 +67,12 @@ export default function Header() {
          </Link>
          
         </ul>
+        
       </div>
+      
     </header>
+    
+
+    
   );
 }

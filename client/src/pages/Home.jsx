@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaFacebook, FaTiktok, FaInstagram } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import SwiperCore from 'swiper';
@@ -68,6 +69,8 @@ export default function Home() {
       </div>
 
       {/* swiper */}
+     
+
       <Swiper navigation>
         {sharingListings &&
           sharingListings.length > 0 &&
@@ -78,7 +81,7 @@ export default function Home() {
                   background: `url(${listing.imageUrls[0]}) center no-repeat`,
                   backgroundSize: 'cover',
                 }}
-                className='h-[500px]'
+                className='h-[800px]'
                 key={listing._id}
               ></div>
             </SwiperSlide>
@@ -125,9 +128,29 @@ export default function Home() {
                 <ListingItem listing={listing} key={listing._id} />
               ))}
             </div>
+            
           </div>
+          
         )}
+             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', marginTop: '10px' }}>
+  <span>Follow Us</span>
+  <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '20px' }}>
+    <span style={{ color: '#4267B2' }}>
+      <FaFacebook size={20} />
+    </span>
+    <span style={{ color: '#000' }}>
+      <FaTiktok size={20} />
+    </span>
+    <span style={{ color: '#E1306C' }}>
+      <FaInstagram size={20} />
+    </span>
+  </div>
+</div>
+
+
       </div>
+ 
     </div>
+    
   );
 }
